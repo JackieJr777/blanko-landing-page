@@ -1,21 +1,3 @@
-/* -------------------- */
-
-/* const menuBody = document.querySelector(".menu-header__body");
-
-const header = document.querySelector(".header"); */
-
-// menuBody.style.top = `${header.offsetHeight}px`;
-
-/* window.addEventListener("resize", function() {
-    console.log(`Ширина вьюпорта равна: ${window.innerWidth}`);
-    if (window.innerWidth <= 900) {
-        console.log(`Ширина вьюпорта меньше 900px!!!`)
-        console.log(menuBody.offsetTop);
-        menuBody.style.top = `${header.offsetHeight}px`;
-
-    }
-}) */
-/* -------------------- */
 
 /* -------------------------меню-бургер------------------------------------ */
 
@@ -46,10 +28,6 @@ window.addEventListener("resize", function() {
 
 
 /* -------------------------мини-слайдер----------------------------------- */
-// мини-слайдер =)
-
-/* const item1 = document.querySelector(".item-druk_1");
-const item2 = document.querySelector(".item-druk_2"); */
 
 const reviews = document.querySelector(".reviews");
 
@@ -73,108 +51,6 @@ if(document.querySelector(".reviews__buttons")) {
 
 
 /* ------Прокручиваемся к нужным блокам при клике по ссылкам в header------ */
-
-// вариант №1
-
-/* // получаем ссылки
-const btnTemplate = document.querySelector(".menu-header__link_template");
-const btnmenuAdvantages = document.querySelector(".menu-header__link_advantages");
-const btnReviews = document.querySelector(".menu-header__link_reviews");
-const btnLandings = document.querySelector(".menu-header__link_landings");
-
-// получаем объекты, к которым нужно проскроллить
-const template = document.querySelector(".template");
-const advantages = document.querySelector(".our-advantages");
-// const druk = document.querySelector(".druk");
-const landings = document.querySelector(".landing-pages");
-
-if (header) {
-    header.addEventListener('click', function(e) {
-        const targetElement = e.target;
-        console.log(targetElement);
-        if (targetElement.closest(".menu-header__link_template")) {
-            e.preventDefault();
-            window.scrollTo ({
-                top: template.offsetTop + header.offsetHeight,
-                behavior: "smooth"
-                
-            })
-            if (burgerParent.classList.contains("_menu-active") && document.body.parentElement.classList.contains("_lock")) {
-                burgerParent.classList.remove("_menu-active");
-                document.body.parentElement.classList.remove("_lock");
-            }
-        }
-        if (targetElement.closest(".menu-header__link_advantages")) {
-            e.preventDefault();
-            window.scrollTo ({
-                top: advantages.offsetTop,
-                behavior: "smooth"
-                
-            })
-            if (burgerParent.classList.contains("_menu-active") && document.body.parentElement.classList.contains("_lock")) {
-                burgerParent.classList.remove("_menu-active");
-                document.body.parentElement.classList.remove("_lock");
-            }
-        }
-        if (targetElement.closest(".menu-header__link_reviews")) {
-            e.preventDefault();
-            window.scrollTo ({
-                top: druk.offsetTop,
-                behavior: "smooth"
-                
-            })
-            if (burgerParent.classList.contains("_menu-active") && document.body.parentElement.classList.contains("_lock")) {
-                burgerParent.classList.remove("_menu-active");
-                document.body.parentElement.classList.remove("_lock");
-            }
-        }
-        if (targetElement.closest(".menu-header__link_landings")) {
-            e.preventDefault();
-            window.scrollTo ({
-                top: landings.offsetTop,
-                behavior: "smooth"
-                
-            })
-            if (burgerParent.classList.contains("_menu-active") && document.body.parentElement.classList.contains("_lock")) {
-                burgerParent.classList.remove("_menu-active");
-                document.body.parentElement.classList.remove("_lock");
-            }
-        }
-        
-    })
-} */
-
-/* --------------------------------------------------------------------- */
-// вариант №2
-
-/* const menuLinks = document.querySelectorAll(".menu-header__link[data-goto]");
-
-console.log(menuLinks);
-
-if(menuLinks.length) {
-    menuLinks.forEach(function(menuLink) {
-        if(menuLink) {
-            menuLink.addEventListener('click', onMenuLinkClick);
-        }
-    })
-
-    function onMenuLinkClick(e) {
-        const menuLink = e.target;
-        if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-            const gotoBlock = document.querySelector(menuLink.dataset.goto);
-            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY/;
-
-            window.scrollTo ({
-                top: gotoBlockValue,
-                behavior: "smooth"
-            });
-            e.preventDefault();
-        }
-    }
-} */
-
-/* --------------------------------------------------------------------- */
-// вариант №3 (делегирование)
 
 const header = document.querySelector(".header");
 
